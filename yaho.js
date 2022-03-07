@@ -3,9 +3,11 @@ const { By } = require('selenium-webdriver')
 const chrome = require('selenium-webdriver/chrome');
 const schedule = require('node-schedule');
 require('dotenv').config();
-  // DB연결
 
 const run = async () => { 
+    
+  chrome_options = Options()
+  chrome_options.add_argument("--single-process")
   // 1. chromedriver 경로 설정 
   // chromedriver가 있는 경로를 입력 
   const service = new chrome.ServiceBuilder('./chromedriver.exe').build(); 
