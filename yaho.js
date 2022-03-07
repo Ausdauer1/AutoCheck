@@ -46,6 +46,7 @@ const run = async () => {
                 setTimeout(async () => { 
                     await driver.findElement(By.className('button stop')).click();
                     await driver.quit(); 
+                    console.log("한번 성공")
                   }, 3000); 
               }, 3000); 
           }, 5000); 
