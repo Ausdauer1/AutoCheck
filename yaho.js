@@ -6,9 +6,7 @@ const schedule = require('node-schedule');
 require('dotenv').config();
 
 const run = async () => { 
-    
-  await driver.close();
-  
+
   const options = new chrome.Options()
 
   options.addArguments('--disable-dev-shm-usage')
