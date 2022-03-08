@@ -7,10 +7,6 @@ require('dotenv').config();
 
 const run = async () => { 
     
-    const options = new chrome.Options()
-
-  options.addArguments('--disable-dev-shm-usage')
-  options.addArguments('--no-sandbox')
   // 1. chromedriver 경로 설정 
   // chromedriver가 있는 경로를 입력 
   const service = new chrome.ServiceBuilder('./chromedriver.exe').build(); 
@@ -20,7 +16,6 @@ const run = async () => {
   // 2. chrome 브라우저 빌드 
   const driver = await new webdriver.Builder() 
   .forBrowser('chrome') 
-  .setChromeOptions(options)
   .build(); 
   
   // 3. google 사이트 열기 
