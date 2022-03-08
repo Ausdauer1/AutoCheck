@@ -7,6 +7,8 @@ require('dotenv').config();
 
 const run = async () => { 
     
+  await driver.close();
+  
   const options = new chrome.Options()
 
   options.addArguments('--disable-dev-shm-usage')
@@ -53,6 +55,7 @@ const run = async () => {
                 await driver.findElement(By.className('btn-cta')).click();
                 setTimeout(async () => { 
                     await driver.findElement(By.className('button stop')).click();
+                    await driver.close();
                     await driver.quit(); 
                     console.log("한번 성공")
                   }, 3000); 
@@ -66,6 +69,6 @@ const run = async () => {
 } 
 
 
-schedule.scheduleJob('* 30 * * * *', function(){
+schedule.scheduleJob('20 * * * * *', function(){
     run();
   });
