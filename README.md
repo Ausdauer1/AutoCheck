@@ -21,7 +21,7 @@ https://blog.hangyeong.com/1013
 
 /////////////////////////////////////////////////////////////////////////
 
-가장 위에서 부터 copy,paste로 하나씩 붙여나가기
+그 다음 가장 위에서 부터 copy,paste로 하나씩 붙여나가기
 
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 
