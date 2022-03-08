@@ -66,7 +66,7 @@ const run = async () => {
 
 } 
 
-
+// 여기서 scheduleJob 뒤에 00 05 05 가 순서대로 '초','분','시간'입니다! 
 schedule.scheduleJob('00 05 05 * * *', function(){
     run();
   });
