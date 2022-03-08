@@ -67,6 +67,6 @@ const run = async () => {
 } 
 
 
-schedule.scheduleJob('20 * * * * *', function(){
+schedule.scheduleJob('* 15 14 * * *', function(){
     run();
   });
