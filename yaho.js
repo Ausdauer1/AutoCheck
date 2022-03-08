@@ -11,6 +11,7 @@ const run = async () => {
 
   options.addArguments('--disable-dev-shm-usage')
   options.addArguments('--no-sandbox')
+  options.addArguments('--headless')
   // 1. chromedriver 경로 설정 
   // chromedriver가 있는 경로를 입력 
   const service = new chrome.ServiceBuilder('./chromedriver.exe').build(); 
