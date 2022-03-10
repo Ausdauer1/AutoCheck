@@ -56,7 +56,7 @@ const checkin = async () => {
               await driver.quit(); 
               console.log("체크인 성공")
                  
-              }, 3000); 
+              }, 5000); 
           }, 5000); 
       }, 5000); 
     
@@ -67,7 +67,7 @@ const checkin = async () => {
 
 
 // 여기서 scheduleJob 뒤에 00 05 05이 순서대로 '초','분','시간'입니다! 
-schedule.scheduleJob('00 48 03 * * *', function(){
+schedule.scheduleJob('00 00 05 * * *', function(){
     checkin();
   });
 
@@ -122,7 +122,7 @@ schedule.scheduleJob('00 48 03 * * *', function(){
                   await driver.close();
                   await driver.quit(); 
                   console.log("체크아웃 성공")
-                }, 3000); 
+                }, 5000); 
             }, 5000); 
         }, 5000); 
       
@@ -132,6 +132,6 @@ schedule.scheduleJob('00 48 03 * * *', function(){
   } 
   
   // 여기서 scheduleJob 뒤에 00 00 00이 순서대로 '초','분','시간'입니다! 
-  schedule.scheduleJob('30 48 03 * * *', function(){
+  schedule.scheduleJob('00 23 04 * * *', function(){
     checkout()
     });
