@@ -66,7 +66,8 @@ const checkin = async () => {
 } 
 
 
-schedule.scheduleJob('00 46 03 * * *', function(){
+// 여기서 scheduleJob 뒤에 00 05 05이 순서대로 '초','분','시간'입니다! 
+schedule.scheduleJob('00 48 03 * * *', function(){
     checkin();
   });
 
@@ -130,7 +131,7 @@ schedule.scheduleJob('00 46 03 * * *', function(){
   
   } 
   
-  
-  schedule.scheduleJob('30 46 03 * * *', function(){
+  // 여기서 scheduleJob 뒤에 00 00 00이 순서대로 '초','분','시간'입니다! 
+  schedule.scheduleJob('30 48 03 * * *', function(){
     checkout()
     });
