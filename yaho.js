@@ -50,7 +50,7 @@ const checkin = async () => {
             
           await driver.findElement(By.className('button start')).click();
             setTimeout(async () => { 
-              await driver.findElement(By.className('btn-cta')).click();
+              // await driver.findElement(By.className('btn-cta')).click();
 
               await driver.close();
               await driver.quit(); 
@@ -117,7 +117,7 @@ schedule.scheduleJob('00 00 05 * * *', function(){
               
               await driver.findElement(By.className('button stop')).click();
               setTimeout(async () => { 
-                  await driver.findElement(By.className('btn-cta')).click();
+                  // await driver.findElement(By.className('btn-cta')).click();
                   
                   await driver.close();
                   await driver.quit(); 
