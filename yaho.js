@@ -122,9 +122,9 @@ schedule.scheduleJob('00 00 05 * * *', function(){
                   await driver.close();
                   await driver.quit(); 
                   console.log("체크아웃 성공")
-                }, 5000); 
-            }, 5000); 
-        }, 5000); 
+                }, 7000); 
+            }, 7000); 
+        }, 7000); 
       
       
     }
