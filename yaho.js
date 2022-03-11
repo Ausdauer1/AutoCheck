@@ -50,7 +50,7 @@ const checkin = async () => {
             
           await driver.findElement(By.className('button start')).click();
             setTimeout(async () => { 
-              // await driver.findElement(By.className('btn-cta')).click();
+              await driver.findElement(By.className('btn-cta')).click();
 
               await driver.close();
               await driver.quit(); 
@@ -117,7 +117,7 @@ schedule.scheduleJob('00 00 05 * * *', function(){
               
               await driver.findElement(By.className('button stop')).click();
               setTimeout(async () => { 
-                  // await driver.findElement(By.className('btn-cta')).click();
+                  await driver.findElement(By.className('btn-cta')).click();
                   
                   await driver.close();
                   await driver.quit(); 
@@ -133,5 +133,5 @@ schedule.scheduleJob('00 00 05 * * *', function(){
   
   // 여기서 scheduleJob 뒤에 00 00 00이 순서대로 '초','분','시간'입니다! 
   schedule.scheduleJob('00 23 04 * * *', function(){
-    checkout()
+    checkout();
     });
